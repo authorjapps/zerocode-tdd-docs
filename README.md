@@ -4,7 +4,7 @@ This is a documentation site [zerocode-tdd](https://github.com/authorjapps/zeroc
 
 ## Quick Start
 
-Download or close the "helloworld" repo and run the sample tests locally
+Download or clone the "helloworld" repo and run the sample tests locally
 
 ## Local Development
 
