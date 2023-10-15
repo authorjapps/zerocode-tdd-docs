@@ -6,8 +6,9 @@
   "load": "Performance & Load Testing",
   "security": "Security Testing",
   "assertions": "Assertions",
-  "faqs": "FAQS",
+  "faqs": "Quick Start & FAQS",
   "blogs": "Blogs & Articles",
+  "extensions": "Customization or Extention",
   "collaboration": "Collaboration & PRs",
   "about": {
     "title": "About",
