@@ -1,4 +1,4 @@
-# Blogs & Links
+# Blogs & Article Links
 
 This page lists Blogs and Articles of various authors have written and published in their respective sites.
 
