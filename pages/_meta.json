@@ -1,11 +1,15 @@
 {
   "index": "Introduction",
-  "api": "API Testing",
+  "microservices": "API Testing",
   "kafka": "Kafka Testing",
   "database": "Database Testing",
   "load": "Performance & Load Testing",
   "security": "Security Testing",
   "assertions": "Assertions",
+  "faqs": "Quick Start & FAQS",
+  "blogs": "Blogs & Articles",
+  "extensions": "Customization or Extention",
+  "collaboration": "Collaboration & PRs",
   "about": {
     "title": "About",
     "type": "page"
