@@ -6,6 +6,9 @@
   "load": "Performance & Load Testing",
   "security": "Security Testing",
   "assertions": "Assertions",
+  "faqs": "FAQS",
+  "blogs": "Blogs & Articles",
+  "collaboration": "Collaboration & PRs",
   "about": {
     "title": "About",
     "type": "page"
