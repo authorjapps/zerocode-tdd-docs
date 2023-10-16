@@ -1,18 +1,12 @@
-Table of contents
-===
-   * [Minimum System Requirements](#minimum-system-requirements)
-   * [Steps](#steps)
-   * [An user-journey test scenario - example](#an-user-journey-test-scenario-example)
-   * [Try-at-home examples](#try-at-home-examples)
+# Minimum System Requirements
 
-Minimum System Requirements
-===
-+ JDK 8 
-+ JUnit 4.12
+- JDK 8
+- JUnit 4.12
 
-Steps
-===
+# Steps
+
 Add this maven dependencies in `test` scope which transitively brings in `JUnit` lib.
+
 ```xml
 <dependency>
     <groupId>org.jsmart</groupId>
@@ -21,7 +15,9 @@ Add this maven dependencies in `test` scope which transitively brings in `JUnit`
     <scope>test</scope>
 </dependency>
 ```
-**Latest release: [1.3.x - Click me](https://search.maven.org/search?q=a:zerocode-tdd)** 🏹
+
+
+**Latest release:** [![Maven](https://maven-badges.herokuapp.com/maven-central/org.jsmart/zerocode-tdd/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.jsmart/zerocode-tdd/) 🏹
 
 Then annotate your `JUnit` test method pointing to the JSON/YAML scenario-file as below via `@Scenario` and `run` as a JUnit test. That's it really!
 
@@ -37,6 +33,7 @@ public class JustHelloWorldTest {
     }
 }
 ```
+
 Where, the `hello_world_scenario_happy_path.json` looks like below.
 
 ```javaScript
@@ -49,8 +46,8 @@ Where, the `hello_world_scenario_happy_path.json` looks like below.
             "name": "get_user_details",                   // <--- Hook for next step
             "url": "/users/octocat",                      // <--- Http URL relative to the host
             "method": "GET",                              // <--- Http method GET, PUT, POST or DELETE etc
-            "retry": { 
-                "max": 5, 
+            "retry": {
+                "max": 5,
                 "delay": 500                              // <--- configurable retry options
             },
             "request": {
@@ -78,6 +75,7 @@ Where, the `hello_world_scenario_happy_path.json` looks like below.
 ```
 
 the `github_host.properties` looks as below:
+
 ```properties
                        github_host.properties
                        ----------------------
@@ -86,14 +84,15 @@ web.application.endpoint.port=443
 web.application.endpoint.context=
 ```
 
-***
+---
 
 Or using YAML:
+
 ```yml
                        hello_world_scenario_happy_path.yaml
                        ------------------------------------
 
-scenarioName: Validate the GET api @@Richard              
+scenarioName: Validate the GET api @@Richard
 steps:
  -
   name: get_user_details                                  // <--- Hook for next step
@@ -117,6 +116,7 @@ steps:
 ```
 
 Runner:
+
 ```java
 @TargetEnv("github_host.properties")
 @RunWith(ZeroCodeUnitRunner.class)
@@ -130,12 +130,10 @@ public class JustHelloWorldTest {
 }
 ```
 
-An User-Journey Test Scenario Example
-===
+# An User-Journey Test Scenario Example
+
 Visit this [User-Journey CRUD testing automation](https://github.com/authorjapps/zerocode/wiki/User-journey:-Create,-Update-and-GET-Employee-Details)
 
-Try-at-home examples
-===
+# Try-at-home examples
 
-Clone or Download the [HelloWord](https://github.com/authorjapps/zerocode-hello-world) project, and follow the [Steps](https://github.com/authorjapps/zerocode-hello-world/blob/master/README.md)  to Run Hello World
-
+Clone or Download the [HelloWord](https://github.com/authorjapps/zerocode-hello-world) project, and follow the [Steps](https://github.com/authorjapps/zerocode-hello-world/blob/master/README.md) to Run Hello World
