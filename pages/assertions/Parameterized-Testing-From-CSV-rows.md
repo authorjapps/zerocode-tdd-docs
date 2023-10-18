@@ -1,16 +1,8 @@
-# Table Of Contents
-
-- [Introduction](#introduction)
-- [Example Input Data](#example-input-data)
-- [Test Scenario](#test-scenario)
-- [Type Casting(optional)](#type-castingoptional)
-- [Conclusion](#conclusion)
-
 # Introduction
 
 During the user journey, if the scenario to be validated has a number of similar set of input, then we can arrange them by `comma separated values` called CSV and fire the tests.
 
-# Example Input Data
+## Example Input Data
 
 When the source is a simple list of CSV rows as below:
 
@@ -27,7 +19,7 @@ It looks like below in a table-format:
 | octocat |  The Octocat   | San Francisco | 583231 |
 | foo     | Foo Is My Name |      Bar City | 112233 |
 
-# Test Scenario
+## Test Scenario
 
 In `Zerocode` we arrange the test input like below:
 
@@ -72,7 +64,7 @@ The full `test scenario` looks like below and runs twice for two(2) for the CSV 
 }
 ```
 
-# Type Casting(optional)
+## Type Casting(optional)
 
 While driving the tests from the set of input data, all input field are `String` by default. But if we want to use any of the fields as `(int)` or `(decimal)` or `(boolean)` etc, then we can cast them to the needed type as below.
 
@@ -107,9 +99,10 @@ While driving the tests from the set of input data, all input field are `String`
 }
 ```
 
-# String With White Spaces
+## String With White Spaces
 
-You can wrap it in single quotes in the CSV rows:
+You can wrap it in single quotes in the CSV rows in order to accomodate white spaces or blank spaces:
+
 e.g.
 
 ```
@@ -129,8 +122,8 @@ Sample:
   }
 ```
 
-# Conclusion
+## Conclusion
 
 We learned here how we can do parameterized testing and how(optionally) we can do type-casting of a field to the desired type.
 
-The examples are available in the HelloWorld section of the README file. We can clone this repo and try at home!
+The examples are available in the HelloWorld section of the README file. We can clone that repo and try at home!
