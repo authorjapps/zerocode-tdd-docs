@@ -1,10 +1,6 @@
+# Array And Element Assertions
 
-#### _Table Of Content_
-* [Asserting an array response is easy and intuitive](#asserting-an-array-response-is-easy-and-intuitive)
-* [Array size assertions can be done as easily as below,](#array-size-assertions-can-be-done-as-easily-as-below)
-* [Finding the occurrence of an element in the array response](#finding-the-occurrence-of-an-element-in-the-array-response)
-
-### Asserting an array response is easy and intuitive
+## Asserting an array response is easy and intuitive
 e.g. if API `GET` response is as below,
 ```
 Url: "/api/v1/screening/persons",
@@ -80,7 +76,7 @@ we want to assert that the 2nd element has `name` called `Mike`, it's quite easy
 }
 ```
 
-### Array size assertions can be done as easily as below,
+## Array size assertions can be done as easily as below,
 e.g. your response has the below array structure:
 ```
 e.g. http response body:
@@ -127,7 +123,7 @@ etc
 
 See more SIZE examples [here](https://github.com/authorjapps/zerocode-hello-world/blob/master/src/test/resources/helloworld_array_size/hello_world_array_size_assertions_test.json) in the [hello-world repo](https://github.com/authorjapps/zerocode-hello-world).
 
-### Finding the occurrence of an element in the array response
+## Finding the occurrence of an element in the array response
 Your use-case is, `Dan` and `Mike` might not be returned in the same order always, but they appear only once in the array.
 
 To assert the above criteria, you can find the element using `JSON path` as below and verify 'Dan' was returned only once in the array and 'Emma' was present in the 'persons' array.
