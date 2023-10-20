@@ -158,6 +158,6 @@ Note-
 Even if a single matching element is found, the return is always an array type. Also if you do a `.length()` on the returned `id`s e.g. `persons[?(@.name=='Dan')].id.length()`, that's also an array i.e. `[2]` instead of simple `2`. That's how JSON path behaves. Hence `.SIZE` helps to achieve this.
 
 Note-
-For the array assertions, the index matters
+For the array assertions, the index matters.
 
 Run [the above test case](https://github.com/authorjapps/consumer-contract-tests/blob/master/src/test/resources/contract_tests/screeningservice/find_element_in_array_via_jsonpath.json) from [here - testFindElementInArray()](https://github.com/authorjapps/consumer-contract-tests/blob/master/src/test/java/org/jsmart/zerocode/testhelp/tests/screeningservice/ScreeningServiceContractTest.java).
