@@ -1,5 +1,4 @@
-Note:
-===
+## Note:
 This sorting mechanism works for API responses as well as records consumed from a Kafka topic.
 
 Without sorting sometimes you can't be sure in which order the HTTP server or Kafka topic will return you an array of results (records).
@@ -11,8 +10,7 @@ Sorting step support next fields:
 
 See examples below for Kafka topics.
 
-Without Sorting (Unstable so-called 'flaky' test)
-===
+## Without Sorting (Unstable so-called 'flaky' test)
 
 Example scenario:
 
@@ -70,8 +68,7 @@ Example scenario:
 
 ```
 
-Sort Order - Natural
-===
+## Sort Order - Natural
 Example scenario:
 
 ```

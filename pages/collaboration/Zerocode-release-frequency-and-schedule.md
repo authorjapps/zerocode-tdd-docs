@@ -1,9 +1,7 @@
-Introduction
-===
+## Introduction
 From 21-Feb-2020 onwards we will be scheduling the new release once in every quarter
 
-Tentative dates
-===
+## Tentative dates
 |Date           |Release Type       |      Status|
 | ------------- |:-------------:|:-----:|
 | 2020-02-21      | Minor release |Done|
@@ -14,6 +12,5 @@ Tentative dates
 | 2021-05-21      | Minor release | |
 
 
-_Note_
-===
+## _Note_
 In the case of urgency for early releases, please contact us at author.japps@gmail.com

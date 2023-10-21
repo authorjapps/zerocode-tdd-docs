@@ -1,11 +1,3 @@
-## Table Of Contents
-* [Introduction](#introduction)
-* [A Test Scenario in YAML DSL format](#a-test-scenario-in-yaml-dsl-format)
-* [Using JayWay JSON Path in The YAML Steps](#using-jayway-json-path-between-the-steps)
-* [Using Array in YAML](#using-array-in-yaml)
-* [Conclusion](#conclusion)
-* [JSON to YAML and YAML to JSON Conversion](#json-to-yaml-and-yaml-to-json)
-
 ## Introduction
 YAML is a human-readable format to configure/declare the outcome of a system. Many projects orchestrate their automation scenarios using YAML due to its easy readable/manageable format(e.g. Kubernetes/Docker provides declarative/configurable `.yml` files to manage the containers). Zerocode provides the super-easy way to achieve this using YAML.
 

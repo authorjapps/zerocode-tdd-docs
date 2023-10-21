@@ -4,8 +4,7 @@
 &nbsp; &nbsp; 
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   <img width="67.5"  height="60" alt="Zerocode" src="https://user-images.githubusercontent.com/12598420/51964581-e5a78e80-245e-11e9-9400-72c4c02ac555.png">
 
-Smart People, Smart _Ideas_
-===
+# Smart People, Smart _Ideas_
 Zerocode has been developed with simple yet smart ideas from automation-testers, developers and manual-testers across the world.
 
 > Experience the simplicity in _Testing_
@@ -13,8 +12,7 @@ Zerocode has been developed with simple yet smart ideas from automation-testers,
 _Apologies, if you didn't find your name here. If you have contributed directly or indirectly, then please write an email to us  @ `author.japps@gmail.com` with brief details about you and your contribution; and we will be glad to include your details in the below list._
 
 
-Smart Contributors
-===
+## Smart Contributors
 
 > _Alphabetically sorted_
 

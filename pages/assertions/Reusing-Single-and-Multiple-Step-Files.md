@@ -1,17 +1,9 @@
 >                   Anish Jha
-## Contents
-   * [Purpose of a step file](#purpose-of-a-step-file)
-   * [Using a single Step File](#using-a-single-step-file)
-   * [Purpose of multiple step files](#purpose-of-multiple-step-files)
-   * [Using a multiple Step Files as Array](#using-a-multiple-step-files-as-array)
-   * [Conclusion](#conclusion)
 
-Purpose of a step file
-===
+# Purpose of a step file
 Step file is a single json file which consist of one common api/step.Suppose when we are writing test for multiple flows and there will be the case where some common api/step needs to execute in more than one flow. So in this scenario instead of writing same api in each flow we can write the step in external file and can reuse in required flows.
 
-Using a single Step File
-===
+## Using a single Step File
 To understand it better, lets take an example. Suppose we have two flow flow1 and flow2 and there is a get api call which is common in both. So for get api call instead of writing in both the flow we will create an external step file and reuse this in both.
 
 flow1.json
@@ -88,12 +80,10 @@ get_customers.json
 
 ```
 
-Purpose of multiple step files
-===
+## Purpose of multiple step files
 Multiple step file is same as single step file but the only difference is,single step file support one step/api call whereas multiple step file support one or more step/api call. 
 
-Using a multiple Step Files as Array
-===
+## Using a multiple Step Files as Array
 Lets take an example. Suppose we have two flow flow1 and flow2 and there is a two get api call which is common in both. So for get api call instead of writing in both the flow we will create an external step file and reuse this in both.
 
 flow1.json
@@ -182,7 +172,6 @@ get_customers.json
 
 ```
 
-Conclusion
-===
+## Conclusion
 Look for a working example in the [HelloWorld repo](https://github.com/authorjapps/zerocode-hello-world)
 (Work in progress, an example to be added in the above repo)

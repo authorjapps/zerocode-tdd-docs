@@ -1,5 +1,4 @@
-When to use JUnit Suite runner Vs Zerocode Package runner
-===
+# When to use JUnit Suite runner Vs Zerocode Package runner
 + Principally both do the same thing
   + i.e. Run all the tests from the single runner
 + When to use JUnit Suite runner ?

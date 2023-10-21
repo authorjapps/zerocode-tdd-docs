@@ -1,9 +1,3 @@
-# Table Of Contents
- * [Introduction](#introduction)
- * [Configuring Max Timeout](#configuring-max-timeout)
- * [How It Works](#how-it-works)
- * [Conclusion](#conclusion)
-
 ## Introduction
 `Implicit Wait` is an optional config for the HttpClient.
 

@@ -1,4 +1,4 @@
-## How to use or generate or deal with Date and Datetime in Zerocode?
+# How to use or generate or deal with Date and Datetime in Zerocode?
 
 e.g.
 
@@ -42,7 +42,7 @@ output: 2018-02-11T21:31:21.77481041     // "uuuu-MM-dd'T'HH:mm:ss.A"
 output: 2018-02-14                       // "uuuu-MM-dd" or "yyyy-MM-dd"
 Default: date.toString(): 2018-02-11T21:31:20.989          // .toString()
 ```
-### See here more-
+## See more here-
 https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html
 
 ```
