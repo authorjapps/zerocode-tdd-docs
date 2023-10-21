@@ -1,10 +1,3 @@
-## Table Of Contents
-* [Introduction](#introduction)
-* [Strict comparison DSL flag](#strict-comparison-dsl-flag)
-* [Using STRICT mode for Payload verification](#using-strict-mode-for-payload-verification)
-* [Using LENIENT mode for Payload verification](#using-lenient-mode-for-payload-verification)
-* [Conclusion](#conclusion)
-
 ## Introduction
 Strict mode Payload comparison makes strict comparison of the expected payload with the actual response payload. 
 

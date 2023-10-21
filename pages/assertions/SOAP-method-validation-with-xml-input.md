@@ -1,6 +1,5 @@
 
-SOAP Testing
-===
+# SOAP Testing
 
 You can invoke SOAP as below which is already supported by zerocode lib, or you can write your own SOAP executor using Java(optionally). 
 
@@ -80,8 +79,7 @@ Response:
 *Response delay:653.0 milli-secs
  ```
 
-Convert XML to JSON and assert using JSON Path
-===
+## Convert XML to JSON and assert using JSON Path
 See an example [here(Click this)](https://github.com/authorjapps/zerocode/blob/master/core/src/test/resources/integration_test_files/soap/soap_endpoint_soap_action_post_200.json).
 
 
