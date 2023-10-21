@@ -1,8 +1,7 @@
-#### After you have finished writing all your tests, what all things to take care next?
+# After you have finished writing all your tests, what all things to take care next?
 These are general things to take care, nothing specific to `Zerocode`, but `Zerocode` makes your life very easy to achieve all these things.
 
-Organization
-===
+## Organization
 
 + Please check the organization of the tests.
   + Check you have organized the test cases by the API features?
@@ -14,8 +13,7 @@ Organization
      + Check you have organized them by the `consumer` names or `boundary` names.
      + Bring up a single Suite runner pointing to the root of the tests(JSON test files). [See here how](https://github.com/authorjapps/zerocode/wiki/Suite-Runner-Vs-Package-runner)
 
-Individual Test Classes
-===
+## Individual Test Classes
 ```java
 import org.jsmart.zerocode.core.domain.EnvProperty;
 import org.jsmart.zerocode.core.domain.Scenario;
@@ -59,8 +57,7 @@ If `env` not supplied, then defaults to "hello_world_host.properties" which by d
 ```
 
 
-Test Suite
-===
+## Test Suite
 + Create a `package` of tests aka `suite` of tests
   + Sometime this may not need any additional work too
   + i.e. just identify the root of the tests for which you want to create a suite runner, that's it.
@@ -78,8 +75,7 @@ public class ContractTestSuite{
 ```
 
 
-CI Build/Jenkins (POM)
-===
+## CI Build/Jenkins (POM)
 
 + Create a Jenkin Build Pipe line for your project.
   + This depends on how you have organized your tests
@@ -126,8 +122,7 @@ Then your Jenkins build goal will be as below(bit shorter than earlier).
 
 _(Basically, it depends on the situation and varies from project to project how teh setup should be)_
 
-CI Build/Jenkins (Gradle)
-===
+## CI Build/Jenkins (Gradle)
 
 + Configure your `Task` fire(if you using Gradle) like [this](https://github.com/BeTheCodeWithYou/SpringBoot-Kotlin/blob/master/build.gradle)
 
@@ -160,8 +155,7 @@ Then your Jenkins goal would be
 > gradle clean build integrationTestsSst  <---- For running against Sst pod
 
 
-Running from IDE
-===
+## Running from IDE
 @TargetEnv("app_host.properties")  <--- Point this to any `properties file` to run the tests against that env
 
 ```
