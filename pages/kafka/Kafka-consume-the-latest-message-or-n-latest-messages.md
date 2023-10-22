@@ -1,6 +1,5 @@
 
-How to consume n latest messages from a Kafka partition
-===
+# How to consume n latest messages from a Kafka partition
 
 > Available in version `1.3.25` onwards.
 

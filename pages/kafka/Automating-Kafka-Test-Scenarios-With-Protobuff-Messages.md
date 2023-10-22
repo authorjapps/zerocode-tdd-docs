@@ -1,17 +1,14 @@
-Description
-===
+# Description
 Google Protobuf is an excellent candidate for serializing messages to send over network due to it provides a very fast serialization algorithm, allows disk space optimization etc. It is also very efficient to serialize the Kafka value to send to a kafka topic.
 
 Protobuf can be used for serializing, deserializing and validating data structures/schemas. `proto-c` is used as Protobuf compiler which compiles the “.proto” files into Java code(also supports for native code generation for most of the mainstream programming languages)
 
-Creating Proto Messages
-===
+## Creating Proto Messages
 The compiled java class for the proto messages are generated at the `target` folder.
 e.g.
 ![image](https://user-images.githubusercontent.com/12598420/92155197-e4023180-ee1e-11ea-93e1-1597ba17d89c.png)
 
-Compiling Proto Messages
-===
+## Compiling Proto Messages
 See `zerocode/kafka-testing/pom.xml`.
 
 Using maven plugin,
@@ -41,18 +38,15 @@ Using maven plugin,
 ```
 
 
-Producing Proto Messages
-===
+## Producing Proto Messages
 See the section "Working Example"
 
 
-Consuming Proto Messages
-===
+## Consuming Proto Messages
 See the section "Working Example"
 
 
-SerDe Properties
-===
+## SerDe Properties
 Producer:
 ```properties
 # =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
@@ -75,8 +69,7 @@ value.deserializer=org.apache.kafka.common.serialization.ByteArrayDeserializer
 ```
 
 
-Working Example
-===
+## Working Example
 
 JUnit class:
 ```
@@ -87,8 +80,7 @@ Scenario:
 zerocode/kafka-testing/src/test/resources/kafka/produce-consume/test_kafka_protobuf.json
 ```
 
-Sample Test Result and Logs
-===
+## Sample Test Result and Logs
 
 <details>
 <summary>Result and Logs(click to expand)</summary>

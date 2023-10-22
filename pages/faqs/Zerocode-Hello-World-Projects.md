@@ -1,5 +1,4 @@
-Hello World 🙌
-====
+# Hello World 🙌
 
 In a typical TDD approach, Zerocode is used in various phases of a project to pass though various quality gates. 
 This makes the TDD cycle very very easy, clean and efficient.

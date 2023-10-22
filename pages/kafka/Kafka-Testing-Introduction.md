@@ -1,6 +1,6 @@
 > _If you are reading this 1st time, then you might need 10 to 15 mins, but afterwards you can skip the intro topics and directly jump to [Docker - Kafka In a Container](https://github.com/authorjapps/zerocode/wiki/Kafka-Testing-Introduction#9-docker---bringing-up-kafka-in-a-container) section, then you need only 2mins._
 
-# 1. Introduction
+## 1. Introduction
 
 In this Wiki page, first we will discuss various concepts of Kafka distributed streams and then learn how to test an application built involving Kafka. We will explore basic to high-level approaches for testing microservices applications built involving Http and Kafka. Also, we will learn about the advantages of the declarative way of testing Kafka applications over the traditional/existing way of testing.
 
@@ -12,7 +12,7 @@ If you are already aware of fundamental concepts, you can directly jump to - [Se
 
 _Visit here for a quick overview of [What is Declarative Testing and Its Advantages](https://github.com/authorjapps/zerocode/wiki/What-is-Zerocode-testing)_
 
-# 1.1 Kafka Testing Challenges
+### 1.1 Kafka Testing Challenges
 
 The difficult part is, some part of the application logic or a DB procedure keeps producing records to a topic and another part of the application keeps consuming the records and continuously processes them based on certain business rules.
 
@@ -21,7 +21,7 @@ The records, partitions, offsets, exception scenarios etc keep on changing, maki
 ![kafka_stream_loaded](https://user-images.githubusercontent.com/12598420/53636875-884b5c80-3c19-11e9-85fb-7812281353db.jpg)
 _Photo credit:[@dnevozhai:unsplash](https://unsplash.com/photos/7nrsVjvALnA)_
 
-# 1.2 Testing Solution Approach
+### 1.2 Testing Solution Approach
 
 We can go for an end-to-end testing approach which will validate both producing, consuming, and DLQ records as well as the application processing logic. This will give us good confidence in releasing our application to higher environments.
 
@@ -32,23 +32,23 @@ _Photo credit:[@jannerboy62:unsplash](https://unsplash.com/@jannerboy62)_
 
 We can do this by bringing up Kafka in dockerized containers or by pointing our tests to any integrated test environment somewhere in our Kubernetes-Kafka cluster or any other microservices infrastructure.
 
-# 2. What We Need To Know To Test Kafka
+## 2. What We Need To Know To Test Kafka
 
 Kafka is a distributed messaging system. When we deal with a Kafka application, we need to know where the `topic` resides and what types of messages aka `records` are written aka `produced` to the topic, then what happens when the messages are `consumed` by the listeners.
 
 Once we know these four things, we should be able to test a Kafka application easily.
 
-# 2.1. What is a Kafka topic
+### 2.1. What is a Kafka topic
 
 Kafka topics are divided into a number of partitions. Partitions allow you to parallelize a topic by splitting the data in a particular topic across multiple brokers — each partition can be placed on a separate machine to allow for multiple consumers to read from a topic in parallel.
 
-# 2.2. What is produce and consume
+### 2.2. What is produce and consume
 
 `Produce` is simply writing one or more records to a topic.
 
 `Consume` is simply reading one or more records from one or more topic(s).
 
-# 2.3. Writing tests only to produce
+### 2.3. Writing tests only to produce
 
 When you write or produce to a topic you can verify the acknowledgment from a Kafka broker which is in the form of `recordMetadata`.
 
@@ -75,7 +75,7 @@ Response from broker after a successful "produce".
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 _(Click [here](https://user-images.githubusercontent.com/12598420/52596194-a3f7ea00-2e47-11e9-93c2-0895608ef93a.gif) to see the enlarged clip)_
 
-# 2.4. Writing tests only to consume
+### 2.4. Writing tests only to consume
 
 When you read or consume from a topic you can verify the record(s) from the topics.
 Here you can validate/assert some of the metadata too, but most of the times you might only need to deal with the records only(not the metadata).
@@ -123,7 +123,7 @@ The full record with meta data information looks like below, which too you can v
 }
 ```
 
-# 2.5. Writing tests for both produce and consume
+### 2.5. Writing tests for both produce and consume
 
 In the same test, you can hook the two steps like below <br/>
 
@@ -134,7 +134,7 @@ In the same test, you can hook the two steps like below <br/>
 - Step-2) Consume from the same topic i.e. `demo-topic` and validate `records`
   - Assert that the same record was in the consumed records with "key": "1234", "value": "Hello World", because we might have consumed more that one record if they were produced to the same topic.
 
-# 2.6. Knowing The Record Format
+### 2.6. Knowing The Record Format
 
 A record is a message which can be written to or fetched from a topic. A record can be of various formats, e.g. RAW, JSON, CSV, AVROetc and many others.
 
@@ -144,7 +144,7 @@ Records are represented in Key, Value pair. Also, it can have optional headers.
 
 Key can also be optional.
 
-# 3. Writing our first produce test-case
+## 3. Writing our first produce test-case
 
 To write the tests for any of 'Produce' or 'Consume' tests, we need to know the following details
 
@@ -288,7 +288,7 @@ Please visit these pages for examples and explanations.
 - [Consume a RAW message](https://github.com/authorjapps/zerocode/wiki/Consume-RAW-message)
 - [Consume a JSON message](https://github.com/authorjapps/zerocode/wiki/Consume-JSON-message)
 
-# 4. Validating Kafka response after producing
+## 4. Validating Kafka response after producing
 
 We can simply tell the test to check that it has been produced successfully as below
 
@@ -350,7 +350,7 @@ Field order doesn't really matter here as long as the structure is maintained. �
 }
 ```
 
-# 5. Validating Kafka response after consuming
+## 5. Validating Kafka response after consuming
 
 We can simply tell the test to check that we have received a number of records we intended to consume.
 
@@ -396,7 +396,7 @@ Or we can ask the test to assert the records along with some metadata e.g. topic
 
 Field order doesn't really matter here as long as the structure is maintained. 👍
 
-# 6. Combining Kafka testing with REST API testing
+## 6. Combining Kafka testing with REST API testing
 
 Most of the time we have situations to deal with Kafka and REST API testing. With `Zerocode` it's just zero effort when comes to this kind of situation or any API testing situation. You only need to hook below things to create a test-case
 
@@ -576,7 +576,7 @@ test_kafka_and_rest.json
 
 ```
 
-# 7. Producing RAW messages vs JSON messages
+## 7. Producing RAW messages vs JSON messages
 
 When we have situation or requirements to produce simple texts which are not JSON records, then the framework takes care of it by default. Or for the test readability(you can even skip this field), you can mention it as below.
 
@@ -621,7 +621,7 @@ public class KafkaRestTest {
 
 See more RAW and JSON examples in the sidebar of the Wiki. :raised_hands:
 
-# 8. Why do I need `zerocode-tdd` lib
+## 8. Why do I need `zerocode-tdd` lib
 
 Zerocode is a light-weight, simple and extensible open-source framework for writing test intentions in a simple JSON format that facilitates both declarative configuration and automation. The framework manages the request payload handling and response verifications at the same time.
 
@@ -629,12 +629,12 @@ Zerocode has taken a different approach to solve the fuss involved in the Kafka 
 
 It has got the best of best ideas and practices from the community and the adoption is rapids growing among the developer/tester community. Even many times the manual test engineers come out and help in automation due to the simplicity of writing tests.
 
-# 9. Docker - Bringing up Kafka in a Container
+## 9. Docker - Bringing up Kafka in a Container
 
 - [Single Node Kafka](https://github.com/authorjapps/zerocode-docker-factory/wiki/Docker-container-for-a-single-node-Kafka-broker)
 - [Kafka with Schema Registry and REST Proxy](https://github.com/authorjapps/zerocode-docker-factory/wiki/Docker-container-for-Kafka-and-Schema-Registry)
 
-# 10. Conclusion
+## 10. Conclusion
 
 In this tutorial, we looked at some of the Kafka concepts and how to test Kafka applications using the Zerocode Testing Framework.
 
@@ -659,7 +659,7 @@ Or directly visit the below executable test-cases.
 - It completely bypasses the Java layer to save us from the fire-fighting we need to do otherwise. It enables us to focus on testing rather than solving coding issues
 - At the same time, along with the simplicity, it is also gives the flexibility to **still** use the Java client(s), to keep the test-cases _declarative_ as they were
 
-# Maven Dependency
+## Maven Dependency
 
 Visit [README](https://github.com/authorjapps/zerocode) page in GitHub.
 

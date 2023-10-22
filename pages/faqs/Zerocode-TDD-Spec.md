@@ -1,61 +1,11 @@
-Table of Contents
-* [What is Declarative Testing](#what-is-declarative-testing)
-* [Advantages of Declarative Testing](#advantages-of-declarative-testing)
-* [Drawing a Simile](#drawing-a-simile)
-* [YAML or JSON based test-scenarios](https://github.com/authorjapps/zerocode/wiki/User-journey:-Create,-Update-and-GET-Employee-Details#using-json)
-* [Testing Without Writing Code](#testing-without-writing-code)
-* [Test Case Fields](#test-case-fields)
-     * [Http(REST API and SOAP)](#httprest-api-and-soap)
-        * [SCENARIO](#scenario)
-        * [LOOP](#loop)
-        * [IGNORESTEPFAILURES](#ignorestepfailures)
-        * [URL](#url)
-        * [METHOD](#method)
-        * [RETRY](#retry)
-        * [CUSTOMLOG](#customlog)
-        * [REQUEST](#request)
-        * [QUERYPARAMS](#queryparams)
-        * [HEADERS](#headers)
-        * [VERIFYMODE](#verifymode)
-        * [VERIFY](#verify)
-        * [STATUS](#status)
-        * [BODY](#body)
-     * [Kafka](#kafka)
-        * [TOPIC](#topic)
-        * [OPERATION](#operation-1)
-        * [PRODUCE/CONSUME](#request-1)
-     * [Kafka Produce](#)
-        * [RECORDTYPE](#)
-        * [RECORDS](#)
-        * [RECORDMETADATA](#recordMetadata)
-        * [LOAD](#)
-        * [STATUS](#)
-        * [OFFSET](#)
-        * [TIMESTAMP](#)
-        * [PARTITION](#)
-     * [Kafka Consume](#)
-        * [COMMITSYNC](#)
-        * [POLLINGTIME](#)
-        * [SHOWRECORDSCONSUMED](#)
-        * [MAXNOOFRETRYPOLLSORTIMEOUTS](#)
-        * [FILEDUMPTO](#)
-        * [CONSUMERLOCALCONFIGS](#)
-        * [UNLOAD](#)
-        * [FILEDUMPTO](#)
-* [HelloWorld Examples (Try at home)](#helloworld-examples-try-at-home)
-* [Running the Tests using <em>JUnit</em>](#running-the-tests-using-junit)
-* [Both Declarative and Extensible](#both-declarative-and-extensible)
-
-What Is Declarative Testing
-===
+# What Is Declarative Testing
 Here is some similar insight from [IEEE](https://ieeexplore.ieee.org/document/5070714)- 
 > We propose a software testing paradigm called declarative testing. In declarative testing, a test scenario focuses on what to accomplish rather than on the imperative details of how to manipulate the state of an application under test and verify the final application state against an expected state. Declarative testing is a test design paradigm which separates test automation code into conceptual Answer, Executor, and Verifier entities. 
 
 + According to [Wikipedia](https://en.wikipedia.org/wiki/Declarative_programming) - 
 > In computer science, declarative programming is a programming paradigm—a style of building the structure and elements of computer programs—that expresses the logic of a computation without describing its control flow.
 
-Advantages of Declarative Testing
-===
+## Advantages of Declarative Testing
 + According to [IEEE](https://ieeexplore.ieee.org/document/5070714) - 
 > Preliminary experience with declarative testing suggests that the modular characteristics of the paradigm may significantly enhance the ability of a testing effort to keep pace with the evolution of a software application during the application's development process.
 
@@ -90,8 +40,7 @@ In the _Declarative Style_ **we don't need to write** any of the below.
 <br/>
 
 
-Drawing a Simile
-===
+## Drawing a Simile
 
 To draw a _simile_, we can pay attention to how docker-compose works. In `docker-compose` we tell the `Docker-Compose` framework(in a YAML file) to spin up certain things at certain ports etc, and then, things are done for us by the framework. 
 
@@ -141,8 +90,7 @@ steps:
       name: "Mr Bean"
 ```
 
-Testing Without Writing Code.
-===
+## Testing Without Writing Code.
 e.g.
 
 <img width="521" alt="YAML large" src="https://www.codeproject.com/KB/applications/1242569/bf168275-8d2f-4969-82a1-51b4e640dad9.Png">
@@ -151,8 +99,7 @@ e.g.
 
 <br/>
 
-Test Case Fields
-===
+## Test Case Fields
 
 1. **Http**(_REST API and SOAP_)
 2. **Kafka** (_Produce, Consume RAW vs JSON_)
@@ -503,8 +450,7 @@ Or `size` with `records` assertion while _Consuming_
 
 <br/>
 
-HelloWorld Examples (Try at home)
-===
+## HelloWorld Examples (Try at home)
 + Http examples are here in [GitHub-Http](https://github.com/authorjapps/zerocode-hello-world/tree/master/src/test/resources)
 + Kafka examples are here in [GitHub-Kafka](https://github.com/authorjapps/hello-kafka-stream-testing/tree/master/src/test/resources/kafka)
 + Java Function Call examples are here in [GitHub-Java](https://github.com/authorjapps/zerocode-hello-world/tree/master/src/test/resources/helloworldjavaexec)
@@ -532,8 +478,7 @@ See the [Table Of Contents](https://github.com/authorjapps/zerocode#table-of-con
 
 For Kafka testing approach, visit this page [Kafka-Testing Quick Start](https://github.com/authorjapps/zerocode/wiki/Kafka-Testing-Introduction).
 
-Running the Tests using _JUnit_
-===
+## Running the Tests using _JUnit_
 + All examples above run via Junit `@Test` annotation like below.
 ```java
 @TargetEnv("github_host.properties")
@@ -552,8 +497,7 @@ public class JustHelloWorldTest {
 
 + Also you can run as a `Suite` pointing to the root of a `package`.
 
-Both Declarative and Extensible
-===
+## Both Declarative and Extensible
 
 **While** Zerocode framework is light-weight and simple to write test intentions in JSON/YAML format, **at the same time** we can customize/extend it to add our own flavours. 
 

@@ -1,24 +1,13 @@
 > If you are reading this wiki for the first time, this might take you around five minutes.
 > Afterwards, it will take just a min only !
 
-## Table Of Content
-
-- [Sample DB SQL Executor](#sample-db-sql-executor)
-- [Postgres DB console](#postgres-db-console)
-- [How the tests will look](#how-the-tests-will-look)
-  - [Sample Test steps:](#sample-test-steps)
-  - [Config properties](#config-properties)
-  - [Executor code](#executor-code)
-  - [Test Logs](#test-logs)
-  - [POM dependencies](#pom-dependencies)
-
-# Sample DB SQL Executor
+## Sample DB SQL Executor
 
 This is particularly useful where as part of your testing you are not satisfied only with the REST responses and you want to verify the DB changes has gone well or not. It's very easy to and sometimes it's a good practice to test this DB verification bit too.
 
 Woking example repo is here to clone and run from your IDE : https://github.com/BeTheCodeWithYou/SpringBoot-ZeroCode-Integration
 
-# Postgres DB console
+## Postgres DB console
 
 See this [Wiki](https://github.com/authorjapps/zerocode-docker-factory/wiki/Docker-container-for-a-Postgres-DB) page for spinning up a docker container for a Postgres DB.
 
@@ -53,7 +42,7 @@ postgres=# select * from employees;
 
 ```
 
-# How the tests will look
+## How the tests will look
 
 The below are sample only, but you can extend this or devise your own execution method which makes your life easy.
 Let's see below how we can achieve this:
@@ -63,7 +52,7 @@ Let's see below how we can achieve this:
 - Executor code (You can even more customize this for your project specific)
 - Test Logs(collected from console logs or target logs)
 
-#### Sample Test steps:
+## Sample Test steps:
 
 ```
 {
@@ -107,7 +96,7 @@ Let's see below how we can achieve this:
 }
 ```
 
-#### Config properties
+## Config properties
 
 This is where you DB host, user, password details goes along with REST/SOAP/Kafka application host.
 
@@ -126,7 +115,7 @@ db_password=password
 
 ```
 
-#### Executor code
+## Executor code
 
 Here the config properties are automatically injected, hence env switching does not affect this code.
 
@@ -165,7 +154,7 @@ public class PostGresSqlExecutor {
     }
 ```
 
-#### Test Logs
+## Test Logs
 
 See the sample request/response after you have executed the test.
 
@@ -238,7 +227,7 @@ Response:
 -done-
 ```
 
-#### POM dependencies
+## POM dependencies
 
 This is for `PostGres` one, you need to add the similar driver dependencies for `Oracle` or `Sybase` or `MySql` etc.
 
