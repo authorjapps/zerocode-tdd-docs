@@ -29,7 +29,7 @@ e.g. below- (Also check in the [TOC README file](https://github.com/authorjapps/
 }
 ``` 
 
-### Note-
+## Note-
 The host and port can be externalized into a properties file too for the regression suites-
 e.g.
 

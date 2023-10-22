@@ -1,13 +1,4 @@
-## Content
-   * [Test scenario](#test-scenario)
-   * [Test log](#test-log)
-   * [Analysis](#analysis)
-       * [Produced XML log](#produced-xml-log)
-       * [Consumed XML log](#consumed-xml-log)
-   * [Conclusion](#conclusion)
-
-Test scenario
-===
+## Test scenario
 ```JSON
 {
     "scenarioName": "Produce and Consume XML as RAW message",
@@ -55,8 +46,7 @@ Test scenario
 }
 ```
 
-Test log
-===
+## Test log
 Logs can be viewed at `target/logs/your-log-file.log` or at the console. In case you miss or clear the logs from the console, you can always go to the target folder and view the logs.
 
 ```bash
@@ -365,8 +355,7 @@ Process finished with exit code 0
 
 ```
 
-Analysis
-===
+## Analysis
 ### Produced XML log
 You can look inside the log for the following and see the `produced XML message` is printed.
 
@@ -403,8 +392,7 @@ Record Key - 6784799632078391362 , Record value - <?xml version="1.0" encoding="
 </soap:Envelope>, Record partition - 0, Record offset - 1
 ```
 
-Conclusion
-===
+## Conclusion
 As expected both produced and consumed records are identical. This is not magic as it appears to be.
 How else it should have been otherwise...?
 

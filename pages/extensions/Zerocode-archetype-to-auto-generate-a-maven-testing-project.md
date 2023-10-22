@@ -1,12 +1,12 @@
 >               Original Author Name: @kristin-smith
 
-# Background
+## Background
 
 _A great time saver!_
 
 This archetype helps developers or a Dev-In-Test automation engineers to set up a working maven project quickly. Also, we can think of this archetype might help us to avoid any errors which could otherwise occur during setting up a project manually.
 
-# Sample CLI
+## Sample CLI
 
 ```bash
 mvn archetype:generate \
@@ -65,7 +65,7 @@ The final command should look like below:
 
 > $ mvn archetype:generate -DarchetypeGroupId=org.jsmart -DarchetypeArtifactId=zerocode-maven-archetype -DarchetypeVersion=1.3.20 -DgroupId=com.mycompany -DartifactId=my-api-e2e-testing
 
-# Optional step
+## Optional step
 
 The sample test scenario [get_api_200](https://github.com/authorjapps/zerocode/wiki/Zerocode-archetype-to-auto-generate-a-maven-testing-project#sample-cli) works fine i.e. the test turns green.
 

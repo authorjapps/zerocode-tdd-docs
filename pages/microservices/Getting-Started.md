@@ -1,9 +1,9 @@
-# Minimum System Requirements
+## Minimum System Requirements
 
 - JDK 8
 - JUnit 4.12
 
-# Steps
+## Steps
 
 Add this maven dependencies in `test` scope which transitively brings in `JUnit` lib.
 
@@ -130,10 +130,10 @@ public class JustHelloWorldTest {
 }
 ```
 
-# An User-Journey Test Scenario Example
+## An User-Journey Test Scenario Example
 
 Visit this [User-Journey CRUD testing automation](https://github.com/authorjapps/zerocode/wiki/User-journey:-Create,-Update-and-GET-Employee-Details)
 
-# Try-at-home examples
+## Try-at-home examples
 
 Clone or Download the [HelloWord](https://github.com/authorjapps/zerocode-hello-world) project, and follow the [Steps](https://github.com/authorjapps/zerocode-hello-world/blob/master/README.md) to Run Hello World

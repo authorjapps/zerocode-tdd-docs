@@ -3,7 +3,7 @@
 In a form, file upload is done using the `<input>` tag with **type="file"**, which allows the user to upload a one or more files from local storage to a server.
 [Read more about file upload](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file)
 
-# Http Headers During The File Upload
+## Http Headers During The File Upload
 
 Files are uploaded to server via a HTTP POST request, this request must however be encoded in one of the following methods:
 
@@ -14,7 +14,7 @@ Files are uploaded to server via a HTTP POST request, this request must however 
 The content type "application/x-www-form-urlencoded" is inefficient for sending large quantities of binary data or text containing non-ASCII characters. The content type "multipart/form-data" should be used for submitting forms that contain files, non-ASCII data, and binary data.
 [Read more about form content types](https://www.w3.org/TR/html401/interact/forms.html#h-17.13.4)
 
-# Writing An Automated Test Scenario
+## Writing An Automated Test Scenario
 
 ### Example 1
 
@@ -96,7 +96,7 @@ Upload one or more files along with form key-value pairs
 
 ```
 
-# Conclusion
+## Conclusion
 
 - Related [Issue link](https://github.com/authorjapps/zerocode/issues/107)
 - Examples to clone and run locally using a spring-boot application is [here](https://github.com/authorjapps/spring-boot-integration-test)

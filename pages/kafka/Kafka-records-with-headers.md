@@ -1,9 +1,7 @@
-Introduction
-===
+## Introduction
 This page explains how to send Kafka headers through PRODUCE operation for automated Kafka testing
 
-Records With Headers (Produce)
-===
+## Records With Headers (Produce)
 Below are the examples of sample records with headers:
 
 ## JSON Record
@@ -34,8 +32,7 @@ Below are the examples of sample records with headers:
 }
 ```
 
-Test Scenario
-===
+## Test Scenario
 A sample PRODUCE and CONSUME scenario would look like below:
 ```JSON
 {
@@ -137,8 +134,7 @@ steps:
 
 ```
 
-Conclusion
-===
+## Conclusion
 Please visit the example module repo for working examples to clone and try at home.
 + [Produce, Consume JSON with headers](https://github.com/authorjapps/zerocode/blob/master/kafka-testing/src/test/java/org/jsmart/zerocode/integration/tests/kafka/produce/KafkaProduceWithHeadersTest.java)
 + [Produce, Consume RAW with headers](https://github.com/authorjapps/zerocode/blob/master/kafka-testing/src/test/java/org/jsmart/zerocode/integration/tests/kafka/produce/KafkaProduceRawWithHeadersTest.java)
