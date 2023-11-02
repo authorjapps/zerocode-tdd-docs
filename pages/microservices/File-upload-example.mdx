@@ -1,0 +1,122 @@
+# File Upload Example
+Here is the example of file upload test scenario.
+
+## Test Scenario 
+```json
+{
+  "scenarioName": "Assert that file has been uploaded successfully",
+  "steps": [
+    {
+      "name": "post_file",
+      "url": "/post",
+      "method": "POST",
+      "request": {
+        "headers": {
+          "Content-Type": "multipart/form-data"
+        },
+      "body": {
+        "files": ["file:helloworld_file_upload/textfile.txt"]
+        }
+      },
+      "verify": {
+        "status": 200,
+        "body": {
+          "files": {
+            "['textfile.txt']": "data:application/octet-stream;base64,SGVsbG9Xb3JsZA=="
+          }
+        }
+      }
+      }
+  ]
+}
+```
+
+## Test execution log
+Console log after the test case was executed.
+
+```
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.84 sec - in 
+
+Running org.jsmart.zerocode.testhelp.tests.helloworldfileupload.HelloWorldFileUploadTest
+-----------------------------------------------------------------------------------
+
+Scenario:
++++++++++
+
+Assert that file has been uploaded successfully 
+
+-----------------------------------------------------------------------------------
+ 
+--------- TEST-STEP-CORRELATION-ID: 55a43d68-ee57-4cbe-8d15-ee78d9220a5e ---------
+*requestTimeStamp:2023-11-01T13:57:10.961
+step:post_file
+id:None
+url:https://postman-echo.com/post
+method:POST
+request:
+{
+  "headers" : {
+    "Content-Type" : "multipart/form-data"
+  },
+  "body" : {
+    "files" : [ "file:helloworld_file_upload/textfile.txt" ]
+  }
+} 
+--------- TEST-STEP-CORRELATION-ID: 55a43d68-ee57-4cbe-8d15-ee78d9220a5e ---------
+Response:
+{
+  "status" : 200,
+  "headers" : {
+    "Date" : [ "Wed, 01 Nov 2023 13:57:11 GMT" ],
+    "Content-Length" : [ "601" ],
+    "set-cookie" : [ "sails.sid=s%3Al3V7FWFH0iaPLKZUhING2m6h76cb2e_W.jP13kawPkgIhf47Y5j2ZZJr1LSHnMEwLbytTtbmEGVk; Path=/; HttpOnly" ],
+    "Content-Type" : [ "application/json; charset=utf-8" ],
+    "Connection" : [ "keep-alive" ],
+    "ETag" : [ "W/\"259-soXPCwXY67HVap/L2sQztkkP+Ac\"" ]
+  },
+  "body" : {
+    "args" : { },
+    "data" : { },
+    "files" : {
+      "textfile.txt" : "data:application/octet-stream;base64,SGVsbG9Xb3JsZA=="
+    },
+    "form" : { },
+    "headers" : {
+      "x-forwarded-proto" : "https",
+      "x-forwarded-port" : "443",
+      "host" : "postman-echo.com",
+      "x-amzn-trace-id" : "Root=1-65425937-11b314ee3e5ae62b0dc4ea3d",
+      "content-length" : "241",
+      "content-type" : "multipart/form-data; boundary=\"16988470309712023-11-01T13:57:10.971\"",
+      "user-agent" : "Apache-HttpClient/4.5 (Java/1.8.0_392)",
+      "accept-encoding" : "gzip,deflate"
+    },
+    "json" : null,
+    "url" : "https://postman-echo.com/post"
+  }
+}
+
+*responseTimeStamp:2023-11-01T13:57:11.331 
+*Response delay:370.0 milli-secs 
+
+---------> Expected Response: <----------
+{
+  "status" : 200,
+  "body" : {
+    "files" : {
+      "['textfile.txt']" : "data:application/octet-stream;base64,SGVsbG9Xb3JsZA=="
+    }
+  }
+} 
+ 
+-done-
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.551 sec - in 
+org.jsmart.zerocode.testhelp.tests.helloworldfileupload.HelloWorldFileUploadTest
+
+```
+
+## Source Code
+Link:
+https://github.com/authorjapps/zerocode/blob/master/http-testing/src/test/resources/helloworld_file_upload/hello_world_file_upload_test.json
