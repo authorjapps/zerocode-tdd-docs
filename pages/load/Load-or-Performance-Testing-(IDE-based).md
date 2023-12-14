@@ -325,3 +325,13 @@ Run
 
 using simple `maven` command e.g.
 > mvn test -Dtest=org.jsmart.zerocode.samples.load.parallelget.LoadGetTest
+
+# Disbaling Report Generation During Large or Heavy Load Testing
+```
+interactive.html.report.disabled=true
+```
+Essentially for largescale load testing, the above configuration tells the framework/library "Do not generate reports". 
+Mainly due to the fatc that, report generation (large scale) is a time and resource/memory consuming tasks.
+
+Visit this Blog for some use load testing use cases:
+https://medium.com/@igorvlahek1/load-testing-with-junit-393a83261745
