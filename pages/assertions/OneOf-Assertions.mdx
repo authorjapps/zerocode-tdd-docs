@@ -1,0 +1,85 @@
+# What is This Feature About
+- Asserting one of the many possible values of a field
+
+
+## In Which Scenario This Feature Can Be Used
+- When the API or the Service is not deterministic around a field value wrt all fields, but certain about at least one field
+- Pass the assertions, if a field contains just one value you are trying to assert, but your test is not dependent on other values
+
+## Problem Example
+e.g. a Service sometimes responds with
+- Run 1
+  `"location" : "San Francisco",` 
+
+- Run 2
+  `"location" : "New York",` 
+
+- Run 3
+  `"location" : "Seattle",` 
+
+## Solution Example
+Then you can assert this way:
+```
+"location" : "$ONE.OF:[San Francisco, New York, Seattle]"
+```
+
+Scenario example:
+```
+{
+    "scenarioName": "Assert that value is one of the items in the array",
+    "steps": [
+        {
+            "name": "match_user_location",
+            "url": "/users/octocat",
+            "method": "GET",
+            "request": {
+            },
+            "assertions": {
+                "status": 200,
+                "body": {
+                    "location" : "$ONE.OF:[San Francisco, New York, Seattle]"
+                }
+            }
+        }
+    ]
+}
+```
+
+## Run Log
+Test console output:
+```
+step:match_user_location
+url:https://avatar.details.github.com/users/octocat
+method:GET
+request:
+{ } 
+--------- TEST-STEP-CORRELATION-ID: 1a9ee9bb-54f6-4277-bc47-249044e7b2fc ---------
+Response:
+{
+  "status" : 200,
+  "headers" : {
+    "Date" : [ "Fri, 08 Mar 2024 11:36:08 GMT" ]
+    "Accept-Ranges" : [ "bytes" ]
+  },
+  "body" : {
+    "login" : "octocat",
+    "id" : 583231,
+    "location" : "San Francisco",
+    "email" : null,
+    "updated_at" : "2024-02-22T12:23:33Z"
+  }
+}
+*responseTimeStamp:2024-03-08T11:36:08.596 
+*Response delay:524.0 milli-secs 
+---------> Expected Response: <----------
+{
+  "status" : 200,
+  "body" : {
+    "location" : "$ONE.OF:[San Francisco, New York, Seattle]"
+  }
+} 
+ 
+-done-
+```
+
+TAGS: ONEOF, ONE OF, ONE.OF
