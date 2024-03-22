@@ -34,11 +34,13 @@ The authors share their test automation experience in terms of the challenges th
 
 - [OAuth2 authentication in Zerocode](https://medium.com/@santhoshtpixler/oauth2-authentication-in-zerocode-8410f2083bad) - Medium - By Santhosh Tpixler (2 min read)
 
-## Performance Blogs
+## Performance Testing or Load Testing Blogs
 
 - [Performance testing using JUnit and maven](https://www.codeproject.com/Articles/1251046/How-to-do-performance-testing-using-JUnit-and-Mave) - Codeproject 15 min Read
 
 - [Simplified Performance testing i.e. Load and Stress testing](https://dzone.com/articles/how-we-do-performance-testing-easily-efficiently-a) - DZone - 10min Read
+
+- [Load testing with JUnit using Zerocode framework - Some good usecases](https://medium.com/@igorvlahek1/load-testing-with-junit-393a83261745)
 
 ## Special Cases
 
