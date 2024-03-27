@@ -1,13 +1,13 @@
-# What is This Feature
+# Using fields as Variables
 - How to create a value as a variables and then use it as a JsonPath inside a test scenario
 
 
-## In Which Scenario This Feature Can Be Used
+## Usage of Variables
 - When a fixed value or a dynamically changing value(e.g. ID or Current Timestamp etc) is used in the requests in more than one steps.
 - This helps in resuing that value across the test scenario as a simple JSONPath e.g. `${$.step_name.request....}`
 
 
-## Problem Example
+## Problem Example(variables)
 Example:
 When you want to publish a message to a Kafka topic with a timestamp as `<current timestamp>Z` (Z is amended)
 or
@@ -48,11 +48,11 @@ a random ID prefixed with `TESLA-PROD-BATCH-3001`, where `3001` is random e.g. i
 
 ```
 
-## Solution Explaination
+## Solution Using Variables
 - Note the 1st step uses just the ID or the timestamp without any prefix or suffix
 - 2nd step uses just the ID or the timestamp with a prefix and suffix
 
-## Run Log
+## Run Log(output)
 Console log/output:
 ```
 -----------------------------------------------------------------------------------
