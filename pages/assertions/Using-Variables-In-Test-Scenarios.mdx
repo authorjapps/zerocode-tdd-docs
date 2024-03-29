@@ -1,0 +1,113 @@
+# Using fields as Variables
+- How to create a value as a variables and then use it as a JsonPath inside a test scenario
+
+
+## Usage of Variables
+- When a fixed value or a dynamically changing value(e.g. ID or Current Timestamp etc) is used in the requests in more than one steps.
+- This helps in resuing that value across the test scenario as a simple JSONPath e.g. `${$.step_name.request....}`
+
+
+## Problem Example(variables)
+Example:
+When you want to publish a message to a Kafka topic with a timestamp as `<current timestamp>Z` (Z is amended)
+or
+a random ID prefixed with `TESLA-PROD-BATCH-3001`, where `3001` is random e.g. it could be `TESLA-PROD-BATCH-3009`
+
+```JSON
+{
+    "scenarioName": "TIMESTAMP or RANDOM ID AS A VARIABLE",
+    "steps": [
+        {
+            "name": "time_stamp",
+            "url": "",
+            "method": "",
+            "request": {
+                "now": "${LOCAL.DATETIME.NOW:yyyy-MM-dd'T'HH:mm:ss.SSSSSS}",
+                "batch": "${RANDOM.NUMBER:4}"
+            },
+            "verify": {
+                "now" : "$NOT.NULL",
+                "batch" : "$NOT.NULL"
+            }
+        },
+        {
+            "name": "next_step",
+            "url": "",
+            "method": "",
+            "request": {
+                "stockTimestamp": "${$.time_stamp.response.now}Z",
+                "batchId": "TESLA-PROD-BATCH-${$.time_stamp.response.batch}"
+            },
+            "verify": {
+                "stockTimestamp": "${$.time_stamp.response.now}Z",
+                "batchId": "TESLA-PROD-BATCH-${$.time_stamp.response.batch}"
+            }
+        }
+    ]
+}
+
+```
+
+## Solution Using Variables
+- Note the 1st step uses just the ID or the timestamp without any prefix or suffix
+- 2nd step uses just the ID or the timestamp with a prefix and suffix
+
+## Run Log(output)
+Console log/output:
+```
+-----------------------------------------------------------------------------------
+
+Scenario:
++++++++++
+
+TIMESTAMP or RANDOM ID AS A VARIABLE 
+
+-----------------------------------------------------------------------------------
+
+step:time_stamp
+url:
+method:
+request:
+{
+  "now" : "2024-03-26T12:30:21.170000",
+  "batch" : "8526"
+} 
+
+Response:
+{
+  "now" : "2024-03-26T12:30:21.170000",
+  "batch" : "8526"
+}
+
+---------> Expected Response: <----------
+{
+  "now" : "$NOT.NULL",
+  "batch" : "$NOT.NULL"
+} 
+-done-
+
+
+step:next_step
+url:
+method:
+request:
+{
+  "stockTimestamp" : "2024-03-26T12:30:21.170000Z",
+  "batchId" : "TESLA-PROD-BATCH-8526"
+} 
+
+Response:
+{
+  "stockTimestamp" : "2024-03-26T12:30:21.170000Z",
+  "batchId" : "TESLA-PROD-BATCH-8526"
+}
+
+---------> Expected Response: <----------
+{
+  "stockTimestamp" : "2024-03-26T12:30:21.170000Z",
+  "batchId" : "TESLA-PROD-BATCH-8526"
+} 
+ 
+-done-
+```
+
