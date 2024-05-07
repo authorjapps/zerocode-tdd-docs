@@ -1,4 +1,4 @@
-# Flavors of Random Number
+## Flavors of Random Number
 
 We can use `${RANDOM.NUMBER}` or `${RANDOM.NUMBER.FIXED}` depending on our business usecases
 
@@ -14,7 +14,7 @@ Use case2:
 
 If we want an ID or any field or part of a field to be a random value inside a scenario, and this value is `fixed` or same, if used more than once inside that scenario
 
-# Using ${RANDOM.NUMBER}
+## Using ${RANDOM.NUMBER}
 
 ```JavaScript
 "steps":[{
@@ -71,7 +71,7 @@ request:
 Every instance of RANDOM.NUMBER is unique
 
 
-#  Using ${RANDOM.NUMBER.FIXED}
+## Using ${RANDOM.NUMBER.FIXED}
 
 Sample step:
 ```
@@ -136,11 +136,11 @@ request:
 `RANDOM.NUMBER.FIXED` placeholders get the `same` random number value within the step
 
 
-# Using ${RANDOM.NUMBER:10}
+## Using ${RANDOM.NUMBER:10}
 
 We can limit random numbers' length. In this case random numbers length(digit count) would be 10. 
 
-# Using ${GLOBAL.RANDOM.NUMBER}
+## Using ${GLOBAL.RANDOM.NUMBER}
 
 In this case all the `${GLOBAL.RANDOM.NUMBER}` random numbers are replaced with a unique number for the entire test session until JVM exits.
 This can be used in the scenarios or steps or the properties files where you need the randomness of the ID for the entire test suite run  
@@ -148,10 +148,10 @@ e.g. for an entire CI build job run.
 
 Available since `V 1.3.31`
 
-# Usage Example
+## Usage Example
 
 Please visit the [Hello World Example(Click this)](https://github.com/sparrowV/zerocode-hello-world/blob/master/src/test/resources/helloworld_random_number/hello_world_random_numbers.json) to see the usages.
 
-# Available since
+## Available since
 
 `V 1.3.19`
