@@ -19,7 +19,8 @@
   },
   "homepage": "https://github.com/SUPAIDEAS/restassured-api-docs/blob/main/pages/index.mdx",
   "dependencies": {
-    "next": "^13.0.6",
+    "@next/third-parties": "^14.2.3",
+    "next": "^14.2.3",
     "nextra": "latest",
     "nextra-theme-docs": "latest",
     "react": "^18.2.0",
