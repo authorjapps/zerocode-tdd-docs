@@ -16,4 +16,4 @@ run `kafka-testing` module tests
 
 ## License
 
-This project is licensed under the MIT License.
+This Documentation project is licensed under the MIT License.
