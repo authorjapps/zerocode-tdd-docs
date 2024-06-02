@@ -127,6 +127,7 @@ We can find the examples in the HelloWorld GitHub repo under `yaml` folder.
 
 ## JSON to YAML and YAML to JSON
 
-+ JSON to YAML : https://www.json2yaml.com/
++ JSON to YAML : https://www.bairesdev.com/tools/json2yaml (New)
+  + _(OLD/Deprecated link: https://www.json2yaml.com/)_
 + YAML to JSON : https://codebeautify.org/yaml-to-json-xml-csv
 + JSON to YAML(another) : https://codebeautify.org/json-to-yaml
