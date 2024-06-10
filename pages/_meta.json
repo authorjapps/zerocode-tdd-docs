@@ -3,8 +3,8 @@
   "microservices": {
     "title": "API Testing",
     "children": [
-      {"name": "Getting-Started", "title": "Getting Started Today"},
-      {"name": "File-Upload-Using-Http-API-Automated-Testing", "title": "File-Upload Validation"}
+      {"name": "Getting-Started.md", "title": "Getting-Started.md"},
+      {"name": "File-upload-test-automation-and-using-form-data.mdx", "title": "File-upload-test-automation-and-using-form-data.mdx"}
     ]
   },
   "kafka": "Kafka Testing",
