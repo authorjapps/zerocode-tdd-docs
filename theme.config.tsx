@@ -7,6 +7,9 @@ const config: DocsThemeConfig = {
   project: {
     link: "https://github.com/authorjapps/zerocode",
   },
+  sidebar: {
+    defaultMenuCollapseLevel: 1, // Set to 1 to collapse all folders by default
+  }
   chat: {
     link: "https://zerocode-workspace.slack.com/join/shared_invite/enQtNzYxMDAwNTQ3MjY1LTA2YmJjODJhNzQ4ZjBiYTQwZDBmZmNkNmExYjA3ZDk2OGFiZWFmNWJlNGRkOTdiMDQ4ZmQyNzcyNzVjNWQ4ODQ#/shared-invite/email",
     icon:(
