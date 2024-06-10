@@ -1,9 +1,0 @@
-{
-  "microservices": {
-    "title": "API Testing",
-    "children": [
-      {"name": "Getting-Started", "title": "Getting Started Today"},
-      {"name": "File-Upload-Using-Http-API-Automated-Testing", "title": "File-Upload Validation"}
-    ]
-  }
-}
