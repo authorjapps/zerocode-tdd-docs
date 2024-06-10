@@ -1,0 +1,15 @@
+{
+    "khel": {
+        "title": "Khel API",
+        "children": [
+            {
+                "name": "Getting-Started.md",
+                "title": "Getting-Started.md"
+            },
+            {
+                "name": "File-upload-example.mdx",
+                "title": "File-upload-example.mdx"
+            }
+        ]
+    }
+}
