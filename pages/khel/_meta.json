@@ -1,5 +1,6 @@
 {
     "start": "Get Started",
     "file-upload": "File Upload Validation Example",
-    "junit-load": "JUnit Parallel Load Testing"
+    "junit-load": "JUnit Parallel Load Testing",
+    "cards": "Two Cards on same row"
 }
