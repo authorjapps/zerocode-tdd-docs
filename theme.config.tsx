@@ -7,7 +7,6 @@ const config: DocsThemeConfig = {
   project: {
     link: "https://github.com/authorjapps/zerocode"
   },
-  search: false,
   sidebar: {
     defaultMenuCollapseLevel: 1, // Set to 1 to collapse all folders by default
   },
