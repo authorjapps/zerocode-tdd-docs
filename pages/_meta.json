@@ -1,26 +1,26 @@
 {
   "index": {
     "type": "page",
-    "title": "HOME"
+    "title": "Home"
   },
-  "khel": {
-    "title": "MY EXPERIENCE",
+  "my-experience": {
+    "title": "My Experience",
     "type": "page"
   },
   "side-projects": {
-    "title": "SIDE HUSTLES",
+    "title": "Side Hustles",
     "type": "page"
   },
   "about": {
-    "title": "BLOGS",
+    "title": "Blogs",
     "type": "page"
   },
   "blogs": {
-    "title": "TALKS",
+    "title": "Talks",
     "type": "page"
   },
   "open-source": {
-    "title": "OPEN SOURCE",
+    "title": "Open Source",
     "type": "page"
   },
   "contact": {
