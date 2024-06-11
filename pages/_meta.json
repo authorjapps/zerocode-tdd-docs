@@ -1,20 +1,32 @@
 {
   "index": {
     "type": "page",
-    "title": "NCHANDRA"
+    "title": "HOME"
   },
   "khel": {
-    "type": "page",
-    "title": "My Experience"
+    "title": "MY EXPERIENCE",
+    "type": "page"
+  },
+  "side-projects": {
+    "title": "SIDE HUSTLES",
+    "type": "page"
   },
   "about": {
-    "title": "ABOUT",
+    "title": "BLOGS",
+    "type": "page"
+  },
+  "blogs": {
+    "title": "TALKS",
+    "type": "page"
+  },
+  "open-source": {
+    "title": "OPEN SOURCE",
     "type": "page"
   },
   "contact": {
-    "title": "Start ↗",
+    "title": "CV ↗",
     "type": "page",
-    "href": "https://github.com/authorjapps/zerocode",
+    "href": "https://google-drive/request/permission/to/view/cv?",
     "newWindow": true
   }
 }
