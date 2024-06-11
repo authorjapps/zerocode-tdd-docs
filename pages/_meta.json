@@ -18,7 +18,12 @@
   "collaboration": "Collaboration & PRs",
   "about": {
     "title": "About",
-    "type": "page"
+    "type": "page",
+    "children": [
+      {"name": "kafka", "title": "Kafka Testing1"},
+      {"name": "Getting-Started.md", "title": "Getting-Started.md"},
+      {"name": "File-upload-test-automation-and-using-form-data.mdx", "title": "File-upload-test-automation-and-using-form-data.mdx"}
+    ]
   },
   "contact": {
     "title": "Start ↗",
