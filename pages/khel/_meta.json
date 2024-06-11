@@ -2,5 +2,6 @@
     "start": "Get Started",
     "file-upload": "File Upload Validation Example",
     "junit-load": "JUnit Parallel Load Testing",
-    "start2": "Two Cards on same row"
+    "start2": "Two Cards on same row",
+    "syntax-highlight": "Syntax Highlight"
 }
