@@ -1,17 +1,22 @@
 {
-  "index": "Introduction",
-  "microservices": "API Testing",
-  "kafka": "Kafka Testing",
-  "database": "Database Testing",
-  "load": "Performance & Load Testing",
-  "security": "Security Testing",
-  "assertions": "Assertions",
-  "faqs": "Quick Start & FAQS",
-  "blogs": "Blogs & Articles",
-  "extensions": "Customization or Extention",
-  "collaboration": "Collaboration & PRs",
+  "index": {
+    "type": "page",
+    "title": "NCHANDRA",
+    "display": "hidden",
+    "theme": {
+      "layout": "raw"
+    }
+  },
+  "my-experience": {
+    "type": "page",
+    "title": "MY EXPERIENCE"
+  },
+  "my-projects": {
+    "type": "page",
+    "title": "MY PROJECTS"
+  },
   "about": {
-    "title": "About",
+    "title": "ABOUT",
     "type": "page"
   },
   "contact": {
