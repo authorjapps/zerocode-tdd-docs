@@ -1,19 +1,11 @@
 {
   "index": {
     "type": "page",
-    "title": "NCHANDRA",
-    "display": "hidden",
-    "theme": {
-      "layout": "raw"
-    }
+    "title": "NCHANDRA"
   },
-  "my-experience": {
+  "khel": {
     "type": "page",
-    "title": "MY EXPERIENCE"
-  },
-  "my-projects": {
-    "type": "page",
-    "title": "MY PROJECTS"
+    "title": "My Experience"
   },
   "about": {
     "title": "ABOUT",
