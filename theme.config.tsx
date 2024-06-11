@@ -5,9 +5,9 @@ import { useRouter } from "next/router";
 const config: DocsThemeConfig = {
   logo: <span>Zerocode TDD Docs</span>,
   project: {
-    link: "https://github.com/authorjapps/zerocode",
+    link: "https://github.com/authorjapps/zerocode"
   },
-    searchPlaceholder: "Search This Site",
+  searchPlaceholder: 'Search This Site...',
   sidebar: {
     defaultMenuCollapseLevel: 1, // Set to 1 to collapse all folders by default
   },
