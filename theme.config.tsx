@@ -7,6 +7,7 @@ const config: DocsThemeConfig = {
   project: {
     link: "https://github.com/authorjapps/zerocode",
   },
+    searchPlaceholder: "Search This Site",
   sidebar: {
     defaultMenuCollapseLevel: 1, // Set to 1 to collapse all folders by default
   },
@@ -40,9 +41,9 @@ const config: DocsThemeConfig = {
   footer: {
     text: "Zerocode TDD Docs",
   },
-  head: () => { 
+  head: () => {
     const { frontMatter } = useConfig()
- 
+
     return (
       <>
         <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon.png"/>
