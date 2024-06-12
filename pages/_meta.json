@@ -1,32 +1,43 @@
 {
-  "index": {
-    "type": "page",
-    "title": "Home"
-  },
-  "my-experience": {
-    "title": "My Experience",
-    "type": "page"
-  },
-  "side-projects": {
-    "title": "Side Hustles",
-    "type": "page"
-  },
-  "about": {
-    "title": "Blogs",
-    "type": "page"
-  },
-  "blogs": {
-    "title": "Talks",
-    "type": "page"
-  },
-  "open-source": {
-    "title": "Open Source",
-    "type": "page"
-  },
-  "contact": {
-    "title": "CV ↗",
-    "type": "page",
-    "href": "https://google-drive/request/permission/to/view/cv?",
-    "newWindow": true
-  }
+    "index": {
+        "type": "page",
+        "title": "Home"
+    },
+    "my-experience": {
+        "title": "Experience",
+        "type": "page"
+    },
+    "side-projects": {
+        "title": "Sides",
+        "type": "page"
+    },
+    "about": {
+        "title": "Blogs",
+        "type": "page"
+    },
+    "blogs": {
+        "title": "Talks",
+        "type": "page"
+    },
+    "open-source": {
+        "title": "OpenSource",
+        "type": "page"
+    },
+    "contact": {
+        "title": "CV ↗",
+        "type": "page",
+        "href": "https://google-drive/request/permission/to/view/cv?",
+        "newWindow": true
+    },
+    "404": {
+        "type": "page",
+        "theme": {
+            "timestamp": false,
+            "typesetting": "article"
+        }
+    },
+    "hide-me": {
+        "type": "page",
+        "display": "hidden"
+    }
 }

@@ -1,23 +1,26 @@
 {
-  "index": "Introduction",
-  "guide": "",
-  "-- Main Projects": {
-    "type": "separator",
-    "title": "Main Projects"
-  },
-  "gov-uk": "",
-  "hsbc-uk": "",
-  "-- Side Hustles": {
-    "type": "separator",
-    "title": "Side Hustles"
-  },
-  "about-link": {
-    "title": "About Nextra",
-    "href": "/about"
-  },
-  "next.js-link": {
-    "title": "Next.js Docs ↗",
-    "href": "https://nextjs.org?utm_source=nextra.site&utm_medium=referral&utm_campaign=sidebar",
-    "newWindow": true
-  }
+    "index": "Introduction",
+    "guide": "",
+    "-- Main Projects": {
+        "type": "separator",
+        "title": "Main Projects"
+    },
+    "hsbc-uk": "",
+    "gov-uk": "",
+    "oss-project": {
+        "type": "page",
+        "title": "Do Not Show",
+        "display": "hidden",
+        "theme": {
+            "layout": "raw"
+        }
+    },
+    "-- Side Hustles": {
+        "type": "separator",
+        "title": "Side Hustles"
+    },
+    "about-link": {
+        "title": "About Nextra",
+        "href": "/about"
+    }
 }
