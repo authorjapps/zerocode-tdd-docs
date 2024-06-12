@@ -1,26 +1,18 @@
 {
     "index": "Introduction",
-    "guide": "",
-    "-- Main Projects": {
+    "-- Corporate Experience": {
         "type": "separator",
         "title": "Main Projects"
     },
     "hsbc-uk": "",
     "gov-uk": "",
-    "oss-project": {
-        "type": "page",
-        "title": "Do Not Show",
-        "display": "hidden",
-        "theme": {
-            "layout": "raw"
-        }
-    },
-    "-- Side Hustles": {
+    "-- OpenSource Experience": {
         "type": "separator",
-        "title": "Side Hustles"
+        "title": "Open Source"
     },
-    "about-link": {
-        "title": "About Nextra",
-        "href": "/about"
+    "oss-project": "Open Source",
+    "-- More>>": {
+        "type": "separator",
+        "title": "More >>"
     }
 }

@@ -1,0 +1,18 @@
+{
+    "index": "My Projects",
+    "-- Main Projects": {
+        "type": "separator",
+        "title": "Main Projects"
+    },
+    "project1": "",
+    "project2": "",
+    "-- Side Hustles": {
+        "type": "separator",
+        "title": "Side Hustles"
+    },
+    "project3": "Open Source",
+    "-- More>>": {
+        "type": "separator",
+        "title": "More >>"
+    }
+}
