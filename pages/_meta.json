@@ -1,23 +1,43 @@
 {
-  "index": "Introduction",
-  "microservices": "API Testing",
-  "kafka": "Kafka Testing",
-  "database": "Database Testing",
-  "load": "Performance & Load Testing",
-  "security": "Security Testing",
-  "assertions": "Assertions",
-  "faqs": "Quick Start & FAQS",
-  "blogs": "Blogs & Articles",
-  "extensions": "Customization or Extention",
-  "collaboration": "Collaboration & PRs",
-  "about": {
-    "title": "About",
-    "type": "page"
-  },
-  "contact": {
-    "title": "Start ↗",
-    "type": "page",
-    "href": "https://github.com/authorjapps/zerocode",
-    "newWindow": true
-  }
+    "index": {
+        "type": "page",
+        "title": "Home"
+    },
+    "my-experience": {
+        "title": "Experience",
+        "type": "page"
+    },
+    "my-projects": {
+        "title": "Projects",
+        "type": "page"
+    },
+    "about": {
+        "title": "Blogs",
+        "type": "page"
+    },
+    "blogs": {
+        "title": "Talks",
+        "type": "page"
+    },
+    "open-source": {
+        "title": "OpenSource",
+        "type": "page"
+    },
+    "contact": {
+        "title": "CV ↗",
+        "type": "page",
+        "href": "https://google-drive/request/permission/to/view/cv?",
+        "newWindow": true
+    },
+    "404": {
+        "type": "page",
+        "theme": {
+            "timestamp": false,
+            "typesetting": "article"
+        }
+    },
+    "hide-me": {
+        "type": "page",
+        "display": "hidden"
+    }
 }

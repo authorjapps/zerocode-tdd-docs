@@ -1,3 +1,0 @@
-Yes, SOAP calls can be tested easily too, depending on your usecase. See [here](https://github.com/authorjapps/zerocode#soap-method-invocation-example-with-xml-input) for details for asserting SOAP responses.
-
-Also you can test **DB APIs**, call **external Java programs**, generating **Load/Stress** etc from the IDE etc without writing boiler-plate or glue code or Http Client code. Check in the [README](https://github.com/authorjapps/zerocode) file for details.
