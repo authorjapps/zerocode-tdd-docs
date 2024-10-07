@@ -12,11 +12,3 @@ export default {
   },
   output: "export"
 };
-
-module.exports = {
-  ...withNextra(),
-  images: {
-    unoptimized: true,
-  },
-  output: "export"
-};
