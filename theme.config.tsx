@@ -1,6 +1,5 @@
 import React from "react";
 import { DocsThemeConfig, useConfig } from "nextra-theme-docs";
-import { useRouter } from "next/router";
 
 const config: DocsThemeConfig = {
   logo: <span>Zerocode TDD Docs</span>,
@@ -38,7 +37,7 @@ const config: DocsThemeConfig = {
   docsRepositoryBase:
     "https://github.com/authorjapps/zerocode-tdd-docs/blob/main",
   footer: {
-    text: "Zerocode TDD Docs",
+    text: <>Zerocode TDD Docs</>,
   },
   head: () => { 
     const { frontMatter } = useConfig()
