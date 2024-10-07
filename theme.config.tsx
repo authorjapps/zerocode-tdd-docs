@@ -37,7 +37,7 @@ const config: DocsThemeConfig = {
   docsRepositoryBase:
     "https://github.com/authorjapps/zerocode-tdd-docs/blob/main",
   footer: {
-    text: <>Zerocode TDD Docs</>,
+    content: <>Zerocode TDD Docs</>,
   },
   head: () => { 
     const { frontMatter } = useConfig()
