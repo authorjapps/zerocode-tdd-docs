@@ -1,4 +1,4 @@
-{
+const meta = {
   "index": "Introduction",
   "microservices": "API Testing",
   "kafka": "Kafka Testing",
@@ -21,3 +21,4 @@
     "newWindow": true
   }
 }
+export default meta;
