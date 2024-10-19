@@ -34,11 +34,11 @@ reads the data using a SQL query and verifies the stored values.
             "request": {
                 "tableName": "players",
                 "csvSource": "my_csv_data_file.csv",
-                "withHeaders" : true
+                "withHeaders": true
             },
-            "verify": { 
-				        "size" : 3
-			      }
+            "verify": {
+                "size": 3
+            }
         },
         {
             "name": "Check the content of inserted rows",
@@ -48,11 +48,24 @@ reads the data using a SQL query and verifies the stored values.
                 "sql": "SELECT ID, NAME, AGE FROM PLAYERS ORDER BY ID"
             },
             "verify": {
-				        "rows.SIZE": 3,
-                "rows": [ //<-- to make this pass in postgres, set the keys to lowercase
-                    { "ID": 1001, "NAME": "Ronaldo", "AGE": 23 },
-                    { "ID": 1002, "NAME": "Devaldo", "AGE": null },
-                    { "ID": 1003, "NAME": "Trevaldo", "AGE": 35 }
+                "rows.SIZE": 3, 
+                "rows": //<-- to make this pass in postgres, set the keys (example: "rows") to lowercase
+                [
+                    {
+                        "ID": 1001,
+                        "NAME": "Ronaldo",
+                        "AGE": 23
+                    },
+                    {
+                        "ID": 1002,
+                        "NAME": "Devaldo",
+                        "AGE": null
+                    },
+                    {
+                        "ID": 1003,
+                        "NAME": "Trevaldo",
+                        "AGE": 35
+                    }
                 ]
             }
         }
