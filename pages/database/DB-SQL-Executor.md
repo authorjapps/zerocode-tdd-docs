@@ -72,6 +72,21 @@ reads the data using a SQL query and verifies the stored values.
     ]
 }
 ```
+
+where, 
+the "verify" block represents the rows/records of the SELECT query result, as shown below:
+```
+            "verify": {
+                ...
+                "rows":
+                [
+                    {"ID": 1001, "NAME": "Ronaldo", "AGE": 23},
+                    {"ID": 1002, "NAME": "Devaldo", "AGE": null},
+                    {"ID": 1003, "NAME": "Trevaldo", "AGE": 35}
+                ]
+            }
+```
+
 ### Config properties
 
 To connect the database, you have to add your DB host, user and password details in the target environment properties file, e.g.
