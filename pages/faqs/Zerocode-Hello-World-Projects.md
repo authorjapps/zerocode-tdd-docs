@@ -1,20 +1,5 @@
 # Hello World 🙌
 
-In a typical TDD approach, Zerocode is used in various phases of a project to pass though various quality gates. 
-This makes the TDD cycle very very easy, clean and efficient.
-e.g.
-+ NFR - Performance Testing
-+ NFR - Security Testing
-+ DEV - Integration Testing
-+ DEV - Dev Build/In-Memory Testing
-+ CI - End to End Testing Build
-+ CI - SIT(System Integration Testing) Build
-+ CI - Contract Test Build
-+ CI - DataBase Integrity Testing
-+ MANUAL - Manual Testing like usual REST clients(Postman or Insomnia etc)
-+ MOCK - API Mocking/Service Virtualization
-
-
 Clone or download the below quick-start repos to run these from your local IDE or maven. 
 
  * Quick start - [**Hello World** examples](https://github.com/authorjapps/zerocode-hello-world) <br/> 
@@ -39,3 +24,19 @@ mvn clean install -DskipTests
 
 For selected module build
 > mvn clean install -pl core,http-testing
+
+## Use Cases (Scenarios)
+In a typical TDD approach, Zerocode-TDD framework is used in various phases of a project to pass though various quality gates,
+making the TDD or Release cycle convenient, clean and efficient.
+e.g.
++ NFR - Performance Testing
++ NFR - Security Testing
++ DEV - Integration Testing
++ DEV - Dev Build/In-Memory Testing
++ CI - End to End Testing Build
++ CI - SIT(System Integration Testing) Build
++ CI - Contract Test Build
++ CI - DataBase Integrity Testing
++ MANUAL - Manual Testing like usual REST clients(Postman or Insomnia etc)
++ MOCK - API Mocking/Service Virtualization
+
