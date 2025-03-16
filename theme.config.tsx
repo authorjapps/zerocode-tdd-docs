@@ -44,20 +44,6 @@ const config: DocsThemeConfig = {
  
     return (
       <>
-          <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.project_id = "c617a643c2004572b225b4";
-              window.frame_type = "widget";
-            `,
-          }}
-        />
-        <script
-          src="https://app.getodin.ai/loader.min.js"
-          project_id="c617a643c2004572b225b4"
-          frame_type="widget"
-          defer
-        />
         
         <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon.png"/>
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
