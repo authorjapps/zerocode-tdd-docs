@@ -1,7 +1,18 @@
-## Minimum System Requirements
+# Minimum System Requirements
++ JDK 8 
++ JUnit 4.12
++ JUnit 5 (Supported for Load/Performance testing)
 
-- JDK 8
-- JUnit 4.12
+Also supported Java versions are:
+- Java 8
+- Java 11
+- Java 17
+- Jaav 21
+- Java 23
+
+(See full list here [in the CI build](https://github.com/authorjapps/zerocode/issues/714#issuecomment-2933761190) status)
+
+If you get error running on higher versions of Java/JDK, please raise a new issue [here](https://github.com/authorjapps/zerocode/issues/new/choose)
 
 ## How to use
 
@@ -19,20 +30,24 @@ Add this maven dependencies in `test` scope which transitively brings in `JUnit`
 
 **Latest release:** [![Maven](https://maven-badges.herokuapp.com/maven-central/org.jsmart/zerocode-tdd/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.jsmart/zerocode-tdd/) 🏹
 
-Then annotate your `JUnit` test method pointing to the JSON/YAML scenario-file as below via `@Scenario` and `run` as a JUnit test. That's it really!
+Then annotate a `JUnit` test method pointing to the JSON/YAML scenario-file as below via `@Scenario` and `run` as a JUnit test via CLI or IDE or CI-CD jobs. 
+
+That's it really!
 
 ```java
-@TargetEnv("github_host.properties")
-@RunWith(ZeroCodeUnitRunner.class)
+@TargetEnv("github_host.properties") //<-------- Host configurations
+@RunWith(ZeroCodeUnitRunner.class)   // <---------Runner
 public class JustHelloWorldTest {
 
     @Test
-    @Scenario("helloworld/hello_world_scenario_happy_path.json")
+    @Scenario("helloworld/hello_world_scenario_happy_path.json") // <--------- Test scenario
     public void testGet() throws Exception {
 
     }
 }
 ```
+
+## How it works
 
 Where, the `hello_world_scenario_happy_path.json` looks like below.
 
