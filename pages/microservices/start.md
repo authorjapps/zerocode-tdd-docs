@@ -3,7 +3,7 @@
 - JDK 8
 - JUnit 4.12
 
-## Steps
+## How to use
 
 Add this maven dependencies in `test` scope which transitively brings in `JUnit` lib.
 
