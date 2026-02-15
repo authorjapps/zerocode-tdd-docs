@@ -419,7 +419,7 @@ For testing chatbots with question-answer flows, CSV format helps organize test 
 | External CSV | `"csvSource": "path/file.csv"`        | `"csvSource": "data/users.csv"` |
 | Index reference | `${index}`                            | `${0}`, `${1}`, `${2}` |
 | Named reference | `${PARAM.columnName}`                 | `${PARAM.username}`, `${PARAM.email}` |
-| Type casting | `(type)${index}` or `(type)${$.name}` | `(int)${3}`, `(boolean)${$.isActive}` |
+| Type casting | `(type)${index}` or `(type)${PARAM.name}` | `(int)${3}`, `(boolean)${PARAM.isActive}` |
 | Value list | `"valueSource": [...]`                | `["val1", "val2"]` |
 
 **Happy Testing!** 🚀
