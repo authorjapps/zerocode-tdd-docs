@@ -15,7 +15,7 @@ const meta = {
     "type": "page"
   },
   "contact": {
-    "title": "GitHub↗",
+    "title": "GitHub ↗",
     "type": "page",
     "href": "https://github.com/authorjapps/zerocode",
     "newWindow": true
