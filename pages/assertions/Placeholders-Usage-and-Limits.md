@@ -1,3 +1,10 @@
+## Placeholder style
+Zerocode supports both `${...}` and `{{...}}` placeholders in test scenarios, target environment property files and parameterized CSV scenarios. Both styles can be used in the same scenario.
+
+For example, `${RANDOM.NUMBER}` can also be written as `{{RANDOM.NUMBER}}`. The same applies to `SYSTEM.PROPERTY:`, `SYSTEM.ENV:`, `PARAM.*`, `MASKED:` and property-key placeholders.
+
+Unknown double-brace values are not replaced. For example, `{{localdatetime offset='-1 days'}}` remains as it is when it is not a Zerocode token or property key.
+
 ## Random number
 The random number can be generated in a step using the placeholder `${RANDOM.NUMBER}`
 
