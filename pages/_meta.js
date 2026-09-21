@@ -1,5 +1,6 @@
 const meta = {
   "index": "Introduction",
+  "comparison": "Framework Comparisons",
   "microservices": "API Testing",
   "kafka": "Kafka Testing",
   "database": "Database Testing",
