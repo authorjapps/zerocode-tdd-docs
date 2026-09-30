@@ -61,7 +61,7 @@ You can chain actions across different transport layers in the same test file wi
 You do not need a separate tool for load testing. By adding the `@LoadWith` annotation and using `ZeroCodeLoadRunner` (JUnit 4) or the JUnit 5 parallel load extension on your existing functional test suite, Zerocode executes the exact same JSON scenarios with hundreds or thousands of virtual users.
 
 ### 5. IDE Autocompletion via Published JSON Schema
-Zerocode publishes a [JSON Schema](schema/zerocode-scenario-schema.json) (Draft-07) for scenario files. Point your IDE at it and get **real-time autocompletion, inline validation, and error highlighting** as you write test scenarios — a capability none of the compared frameworks offer for their test definition files.
+Zerocode publishes a [JSON Schema](https://github.com/authorjapps/zerocode/blob/master/schema/zerocode-scenario-schema.json) (Draft-07) for scenario files. Point your IDE at it and get **real-time autocompletion, inline validation, and error highlighting** as you write test scenarios — a capability none of the compared frameworks offer for their test definition files.
 
 ---
 
@@ -233,6 +233,6 @@ No variables to declare, no context objects to manage.
 
 - **Documentation:** [zerocode-tdd.tddfy.com](https://zerocode-tdd.tddfy.com) — Indexed, searchable reference
 - **Developer Guide:** [GitHub Wiki](https://github.com/authorjapps/zerocode/wiki#developer-guide)
-- **JSON Schema for Scenarios:** [`schema/zerocode-scenario-schema.json`](schema/zerocode-scenario-schema.json)
+- **JSON Schema for Scenarios:** [`schema/zerocode-scenario-schema.json`](https://github.com/authorjapps/zerocode/blob/master/schema/zerocode-scenario-schema.json)
 - **Quick Start (CLI):** [Steply](https://github.com/QABEES/steply?tab=readme-ov-file#steply)
 - **Community:** [Slack](https://join.slack.com/t/zerocode-workspace/shared_invite/enQtNzYxMDAwNTQ3MjY1LTA2YmJjODJhNzQ4ZjBiYTQwZDBmZmNkNmExYjA3ZDk2OGFiZWFmNWJlNGRkOTdiMDQ4ZmQyNzcyNzVjNWQ4ODQ) · [Mailing List](https://groups.google.com/forum/#!forum/zerocode-automation)
