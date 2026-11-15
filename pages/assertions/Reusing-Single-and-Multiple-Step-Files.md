@@ -175,3 +175,77 @@ get_customers.json
 ## Conclusion
 Look for a working example in the [HelloWorld repo](https://github.com/authorjapps/zerocode-hello-world)
 (Work in progress, an example to be added in the above repo)
+## Passing parameters to a step file (from version 1.4.5)
+Sometimes the same step file is needed more than once, but with different values. For example, creating an admin user and a viewer user uses the same steps, only the username and role are different. Instead of copying the step file for every value, add a `parameters` object to the step that uses the file, and read each value inside the step file with `${PARAM.name}`.
+
+`parameters` works with both `stepFile` and `stepFiles`.
+
+create_and_verify_user.json (the shared step file)
+```json
+[
+    {
+        "name": "create_user",
+        "url": "/api/v1/users",
+        "operation": "POST",
+        "request": {
+            "body": {
+                "username": "${PARAM.username}",
+                "role": "${PARAM.role}"
+            }
+        },
+        "assertions": {
+            "status": 201
+        }
+    },
+    {
+        "name": "get_user",
+        "url": "/api/v1/users/${PARAM.username}",
+        "operation": "GET",
+        "request": {},
+        "assertions": {
+            "status": 200,
+            "body": {
+                "username": "${PARAM.username}",
+                "role": "${PARAM.role}"
+            }
+        }
+    }
+]
+```
+
+user_roles_test.json (the scenario using the file twice, with different parameters)
+```json
+{
+    "scenarioName": "Reuse the same step file to create an admin and a viewer user",
+    "steps": [
+        {
+            "id": "create_admin",
+            "name": "create_admin_reuse",
+            "stepFiles": "${JSON.FILE:common/create_and_verify_user.json}",
+            "parameters": {
+                "username": "alice",
+                "role": "ADMIN"
+            }
+        },
+        {
+            "id": "create_viewer",
+            "stepFiles": "${JSON.FILE:common/create_and_verify_user.json}",
+            "parameters": {
+                "username": "bob",
+                "role": "VIEWER"
+            }
+        }
+    ]
+}
+```
+
+### Things to know
+- `${PARAM.name}` is replaced only in the step file used by that step. It is not available in the rest of the scenario.
+- `{{PARAM.name}}` also works in place of `${PARAM.name}`.
+- A parameter value can itself contain other tokens, for example `"username": "user_${RANDOM.NUMBER}"`. These are resolved after the parameters are filled in.
+- Numbers and booleans are replaced as text, so use the usual casts where needed, for example `"retries": "(int)${PARAM.retries}"`.
+- `parameters` is optional. Step files without it work as before.
+- `parameters` must be a JSON object, and it can only be used together with `stepFile` or `stepFiles`.
+- If the step file uses `${PARAM.role}` but `role` is missing from `parameters`, the test fails before any step runs, with a message like:
+  `stepFiles 'common/create_and_verify_user.json' (id: create_admin) uses ${PARAM.role}, but 'role' is not in "parameters"`
+- The names of the steps inside the file stay the same, so later steps can still use `${$.get_user.response...}`. In the logs and reports, each step is shown together with the step that used the file, for example `create_admin_reuse (id: create_admin) -> get_user`.
